@@ -31,7 +31,7 @@ var path = {
 		style: 'src/style/main.scss',
 		images: 'src/images/**/*.*',
 		img: 'src/img/**/*.*',
-		fonts: 'src/fonts/**/*.*'
+		fonts: 'src/fonts/**/*.*{ttf,woff,woff2,svg,eot}'
 	},
 	watch: {
 		html: 'src/**/*.pug',
@@ -39,7 +39,7 @@ var path = {
 		style: 'src/style/**/*.scss',
 		images: 'src/images/**/*.*',
 		img: 'src/img/**/*.*',
-		fonts: 'src/fonts/**/*.*'
+		fonts: 'src/fonts/**/*.*{ttf,woff,woff2,svg,eot}'
 	},
 	clean: './build'
 };
@@ -65,22 +65,22 @@ gulp.task('html:build', function () {
 gulp.task('html:build', function buildHTML() {
 	return gulp.src('src/views/*.pug')
 		.pipe(pug({
-		// Your options in here.
-		pretty: true
+			// Your options in here.
+			pretty: true
 		}))
 		.pipe(gulp.dest(path.build.html))
-		.pipe(reload({stream: true}));
-  });
+		.pipe(reload({ stream: true }));
+});
 
 gulp.task('js:build', function () {
 	return gulp.src(path.src.js)
 		.pipe(plumber())
 		.pipe(rigger())
-		//.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init())
 		//.pipe(uglify())
-		//.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.js))
-		.pipe(reload({stream: true}));
+		.pipe(reload({ stream: true }));
 });
 
 gulp.task('style:build', function () {
@@ -89,25 +89,23 @@ gulp.task('style:build', function () {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		//.pipe(gcmq())
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions']
-		}))
-		.pipe(cleanCSS({rebase: false}))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+		.pipe(cleanCSS({ rebase: false }))
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest(path.build.css))
-		.pipe(reload({stream: true}));
+		.pipe(reload({ stream: true }));
 });
 
 gulp.task('images:build', function () {
 	return gulp.src(path.src.images)
-		/*.pipe(imagemin({
+		.pipe(imagemin({
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()],
 			interlaced: true
-		}))*/
+		}))
 		.pipe(gulp.dest(path.build.images))
-		.pipe(reload({stream: true}));
+		.pipe(reload({ stream: true }));
 });
 gulp.task('img:build', function () {
 	return gulp.src(path.src.img)
@@ -118,19 +116,20 @@ gulp.task('img:build', function () {
 			interlaced: true
 		}))*/
 		.pipe(gulp.dest(path.build.img))
-		.pipe(reload({stream: true}));
+		.pipe(reload({ stream: true }));
 });
 
-gulp.task('fonts:build', function() {
+gulp.task('fonts:build', function () {
 	return gulp.src(path.src.fonts)
 		.pipe(gulp.dest(path.build.fonts))
+		.pipe(reload({ stream: true }));
 });
 
 
 
 gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts:build', 'images:build', 'img:build'));
 
-gulp.task('watch', function(){
+gulp.task('watch', function () {
 	gulp.watch([path.watch.html], gulp.series("html:build"));
 	gulp.watch([path.watch.style], gulp.series("style:build"));
 	gulp.watch([path.watch.js], gulp.series("js:build"));
@@ -149,4 +148,4 @@ gulp.task('clean', function (cb) {
 
 gulp.task('webwatch', gulp.parallel('watch', 'webserver'));
 
-gulp.task('default', gulp.series('build','webwatch'));
+gulp.task('default', gulp.series('build', 'webwatch'));

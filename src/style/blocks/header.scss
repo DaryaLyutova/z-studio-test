@@ -1,0 +1,31 @@
+.header {
+    @include rowDirection();
+    width: 100%;
+    max-width: 1280px;
+
+    &__logo {
+        width: 64px;
+        height: 65px;
+        background-image: url('../../images/tu\ 1.svg');
+        margin: 59px 0 0 175px;
+    }
+
+    &__navigation {
+        @include rowDirection();
+        margin: 66px 0 0 185px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $colorWigth;
+        font-family: 'ALS Hauss';
+        font-style: normal;
+        font-weight: 350;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: right;
+        letter-spacing: -1.25573px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        padding-left: 50px;    
+    }
+}

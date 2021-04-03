@@ -1,0 +1,44 @@
+.info {
+    @include rowDirection();
+
+    &__title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 0 175px;
+        max-width: 923px;
+        font-family: ALS Hauss;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 100px;
+        line-height: 100px;
+        letter-spacing: -1.25573px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $colorWigth;
+    }
+
+    &__wrapper {
+        @include columnDirection();
+    }
+
+    &__image {
+        width: 835px;
+        height: 835px;
+    }
+
+    &__subtitle {
+        position: relative;
+        top: -74px;
+        font-family: ALS Hauss;
+        font-style: normal;
+        font-weight: 350;
+        font-size: 32px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #FEA430;
+        margin: 0;
+    }
+}

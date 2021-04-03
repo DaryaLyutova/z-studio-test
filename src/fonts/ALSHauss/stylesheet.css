@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'ALS Hauss';
+    src: url('./ALSHauss-Light.eot');
+    src: local('./ALS Hauss Light'), local('ALSHauss-Light'),
+        url('./ALSHauss-Light.eot?#iefix') format('embedded-opentype'),
+        url('./ALSHauss-Light.woff2') format('woff2'),
+        url('./ALSHauss-Light.woff') format('woff'),
+        url('./ALSHauss-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ALS Hauss';
+    src: url('./ALSHauss-Medium.eot');
+    src: local('./ALS Hauss Medium'), local('ALSHauss-Medium'),
+        url('./ALSHauss-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./ALSHauss-Medium.woff2') format('woff2'),
+        url('./ALSHauss-Medium.woff') format('woff'),
+        url('./ALSHauss-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

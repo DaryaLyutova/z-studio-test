@@ -1,0 +1,5 @@
+.description {
+    @include columnDirection();
+    align-items: center;
+    justify-content: center;
+}
