@@ -1,0 +1,57 @@
+.about-us {
+    @include columnDirection();
+    align-items: center;
+    justify-content: center;
+    font-family: $fontFamily;
+    width: 100%;
+    max-width: 1920px;
+
+    &__wrapper{
+        @include columnDirection();
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    &__block {
+        @include rowDirection();
+        justify-content: center;
+    }
+
+    &__image-teachers {
+        position: relative;
+        // left: -98px;
+        top: -83px;
+        display: flex;
+        max-width: 1107px;
+        max-height: 886px;
+        margin-right: 74px;
+    }
+
+    &__subtitle-teachers {
+        @include aboutUsText();
+        max-width: 720px;
+        margin-right: 117px;
+    }
+
+    &__link {
+        @include textOrange();
+    }
+
+    &__image-guests {
+        position: relative;
+        top: -67px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 997px;
+        max-height: 798px;
+    }
+
+    &__subtitle-guests {
+        @include aboutUsText();
+        max-width: 654px;
+        margin-left: 188px;
+        margin-right: 83px;
+    }
+
+}

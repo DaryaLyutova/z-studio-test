@@ -1,0 +1,36 @@
+.client {
+    @include columnDirection();
+    align-items: center;
+    justify-content: center;
+
+    &__subtitle {
+        @include aboutUsText();
+        display: flex;
+        text-align: center;
+        align-items: center;
+        max-width: 752px;
+        font-family: $fontFamily;
+        margin: 126px 0 99px 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 0 40px;
+        justify-items: center;
+        width: 100%;
+        max-width: 1040px;
+        margin: 0 0 200px 0;
+    }
+
+    &__item {
+        width: 230px;
+        height: 133px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

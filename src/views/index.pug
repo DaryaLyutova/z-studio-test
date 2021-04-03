@@ -16,21 +16,40 @@ html(lang="ru")
                 a.header__link(href="#") Личный кабинет
         main.description 
             section.info 
-                h1.info__title школа диджитал навыков от практикующих профессионалов
+                h1.info__title школа <br>диджитал навыков от <span class="info__title-italics">практикующих</span> профессионалов
                 div.info__wrapper
                     img.info__image(src="../images/info.png", alt="О школе за 72 секунды")
                     p.info__subtitle О школе за 72 секунды
             section.about-us 
-        footer.footer 
-            nav.footer__navigation 
-                a.footer__link(href="#")
-                a.footer__link(href="#")
-                a.footer__link(href="#")
-                a.footer__link(href="#")
-                a.footer__link(href="#")
-                a.footer__link(href="#")
-                a.footer__link(href="#")
-                a.footer__link(href="#")
+                div.about-us__block
+                    img.about-us__image-teachers(src="../images/image-1.svg", alt="прогулка")
+                    div.about-us__wrapper
+                        p.about-us__subtitle-teachers Каждый преподаватель это либо специалист нашей студии, либо владелец бизнеса
+                        a.about-us__link(href="#") портфолио студии
+                div.about-us__block 
+                    div.about-us__wrapper
+                        p.about-us__subtitle-guests Мы не приглашаем именитых гостей ради заголовков
+                        p.about-us__subtitle-guests У нас только практические знания для приобретения навыка
+                    img.about-us__image-guests(src="../images/image-2.svg", alt="ключ")
+            section.client    
+                p.client__subtitle За 3 года через нас прошло более 7 000 специалистов, среди которых сотрудники
+                ul.client__list 
+                    li.client__item
+                        img.client__item-image(src="../images/Логотип_телеканала_«ТНТ»_с_2020_года 1.svg", alt="ТНТ")
+                    li.client__item
+                        img.client__item-image(src="../images/Vector.svg", alt="Кока-кола")
+                    li.client__item
+                        img.client__item-image(src="../images/Splat.svg", alt="Сплат")
+                    li.client__item
+                        img.client__item-image(src="../images/BlackStar.svg", alt="Блэк Стар")
+                    li.client__item
+                        img.client__item-image(src="../images/Toyota.svg", alt="Тойота")
+                    li.client__item
+                        img.client__item-image(src="../images/Henkel.svg", alt="Хенкель")
+                    li.client__item
+                        img.client__item-image(src="../images/Baikal.svg", alt="Байкал")
+                    li.client__item
+                        img.client__item-image(src="../images/department.svg", alt="ДОиН г. Москвы")
     //- h1 Pug - node template engine
     //- #container.col
     //-   if youAreUsingPug

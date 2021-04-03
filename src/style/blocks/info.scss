@@ -1,14 +1,14 @@
 .info {
     @include rowDirection();
+    font-family: $fontFamily;
+    font-style: normal;
 
     &__title {
-        display: flex;
+        display: block;
         justify-content: flex-start;
         align-items: center;
         margin: 0 0 0 175px;
         max-width: 923px;
-        font-family: ALS Hauss;
-        font-style: normal;
         font-weight: normal;
         font-size: 100px;
         line-height: 100px;
@@ -17,28 +17,28 @@
         color: $colorWigth;
     }
 
+    // &__title-italics {
+    //     font-family: $font-family1;
+    // }
+
     &__wrapper {
         @include columnDirection();
     }
 
     &__image {
-        width: 835px;
-        height: 835px;
+        display: flex;
+        max-width: 835px;
+        max-height: 835px;
     }
 
     &__subtitle {
+        @include textOrange();
         position: relative;
         top: -74px;
-        font-family: ALS Hauss;
-        font-style: normal;
-        font-weight: 350;
-        font-size: 32px;
-        line-height: 100%;
+        font-weight: 350;        
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        color: #FEA430;
         margin: 0;
     }
 }

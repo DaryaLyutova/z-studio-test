@@ -1,6 +1,5 @@
-// $fontFamily1: 'Helvetica Neue Cyr Thin', 'AdobeInvisFont', 'Myriad Pro Regular';
-// $fontFamily2: 'Bebas Neue', 'AdobeInvisFont', 'Myriad Pro Regular';
-// $colorPink: #e71e6e;
+$fontFamily: 'ALS Hauss', Arial, Helvetica;
+// $font-family1: 'BonaNova-Italic';
 $colorWigth: #ffffff;
 // $colorGrey: #101010;
 // $moveWigth: 750px;
@@ -29,6 +28,27 @@ $colorWigth: #ffffff;
 @mixin columnDirection {
   display: flex;
   flex-direction: column;
+}
+
+@mixin textOrange {
+    font-family: ALS Hauss;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 100%;
+    align-items: center;
+    text-align: center;
+    color: #FF9B07;
+}
+
+@mixin aboutUsText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 124%;
+    letter-spacing: -1.26px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #ffffff;
 }
 
 // @mixin buttonDefaultStyle {
