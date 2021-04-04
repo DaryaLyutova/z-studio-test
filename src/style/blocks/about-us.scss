@@ -15,6 +15,7 @@
 
     &__block {
         @include rowDirection();
+        font-size: 48px;
 
         &:last-of-type {
         position: relative;
@@ -26,6 +27,7 @@
         position: relative;
         top: -83px;
         display: flex;
+        width: 100%;
         max-width: 1107px;
         max-height: 886px;
         margin-right: 74px;
@@ -47,6 +49,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        width: 100%;
         max-width: 997px;
         max-height: 798px;
     }
@@ -64,3 +67,123 @@
     }
 
 }
+
+
+@media all and (max-width: 1720px) {
+    .about-us {
+        &__block {
+            font-size: 42px;
+        }
+        
+        &__image-teachers {
+                max-width: 1007px;
+                max-height: 805px;
+                margin-right: 64px;
+        }
+    
+        &__subtitle-teachers {
+            margin: 208px 97px 37px 0;
+        }
+    
+        &__image-guests {
+            max-width: 897px;
+            max-height: 717px;
+        }
+    
+        &__subtitle-guests {
+            margin: 166px 73px 0 168px;
+        }    
+    }
+}
+
+@media all and (max-width: 1550px) {
+    .about-us {
+
+        &__block {
+            font-size: 36px;
+        }
+
+        &__image-teachers {
+            max-width: 850px;
+            max-height: 681px;
+            margin-right: 54px;
+        }
+    
+        &__subtitle-teachers {
+            margin: 178px 87px 20px 0;
+        }
+    
+        &__image-guests {
+            max-width: 750px;
+            max-height: 600px;        
+        }
+    
+        &__subtitle-guests {
+            margin: 146px 63px 0 148px;
+        }
+    
+    }       
+}
+
+
+@media all and (max-width: 1450px) {
+    .about-us {
+
+        &__block {
+            font-size: 32px;
+        }
+
+        &__image-teachers {
+            max-width: 850px;
+            max-height: 681px;
+            margin-right: 54px;
+        }
+    
+        &__subtitle-teachers {
+            margin: 158px 77px 20px 0;
+        }
+    
+        &__image-guests {
+            max-width: 750px;
+            max-height: 600px;        
+        }
+    
+        &__subtitle-guests {
+            margin: 126px 53px 0 148px;
+        }
+    
+    }       
+}
+
+@media all and (max-width: 1310px) {
+    .about-us {
+
+        &__block {
+            font-size: 32px;
+        }
+
+        &__image-teachers {
+            max-width: 650px;
+            max-height: 520px;
+            margin-right: 44px;
+        }
+    
+        &__subtitle-teachers {
+            margin: 128px 57px 20px 0;
+        }
+    
+        &__image-guests {
+            max-width: 550px;
+            max-height: 440px;        
+        }
+    
+        &__subtitle-guests {
+            margin: 96px 43px 0 135px;
+
+            &:last-of-type {
+                padding-top: 30px;
+            }
+        }    
+    }       
+}
+

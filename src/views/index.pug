@@ -19,7 +19,7 @@ html(lang="ru")
                 h1.info__title школа <br>диджитал навыков от <span class="info__title-italics">практикующих</span> профессионалов
                 div.info__wrapper
                     img.info__image(src="../images/info.png", alt="О школе за 72 секунды")
-                    p.info__subtitle О школе <span class="info__subtitle info__subtitle_boild">  за 72 секунды</span>
+                    button.info__button О школе <span class="info__subtitle info__subtitle_boild">  за 72 секунды</span>
             section.about-us 
                 div.about-us__block
                     img.about-us__image-teachers(src="../images/image-1.svg", alt="прогулка")
@@ -50,12 +50,8 @@ html(lang="ru")
                         img.client__item-image(src="../images/Baikal.svg", alt="Байкал")
                     li.client__item
                         img.client__item-image(src="../images/department.svg", alt="ДОиН г. Москвы")
-    //- h1 Pug - node template engine
-    //- #container.col
-    //-   if youAreUsingPug
-    //-     p You are amazing
-    //-   else
-    //-     p You are amazing
-    //-   p.
-    //-     Pug is a terse and simple templating language with a
-    //-     strong focus on performance and powerful features.
+        div.popup
+            figure.popup__container
+                button.popup__close-button
+                iframe.popup__video(src="https://www.youtube.com/embed/XemDmsmnYII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    script(src="./js/main.js")

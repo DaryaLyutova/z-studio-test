@@ -14,7 +14,6 @@
         font-weight: normal;
         font-size: 100px;
         line-height: 100%;
-
         color: $colorWigth;
     }
 
@@ -29,19 +28,105 @@
 
     &__image {
         display: flex;
+        width: 474px;
         height: 603px;
         margin: 116px 182px 42px 182px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    &__subtitle {
+    &__button {
         @include textOrange();
+        font-size: 32px;
         font-weight: 350;      
-        margin: 0 0 42px 0; 
+        margin: 0 0 42px 0;
+        background-color: inherit;
+        border: none;
+
+        &:focus{
+            outline: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
 
         &_boild {
             font-family: $fontFamilyMed;
             font-weight: bold; 
             margin: 0;
+        }
+    }
+}
+
+@media all and (max-width: 1720px) {
+    .info {    
+        &__title { 
+            font-size: 72px;
+        }
+
+        &__image {
+            width: 434px;
+            height: 552px;
+        }
+    
+        &__button {
+            font-size: 28px;
+        }
+    }
+}
+
+@media all and (max-width: 1550px) {
+    .info {    
+        &__title {
+            font-size: 58px;
+        }
+    
+        &__image {
+            width: 384px;
+            height: 488px;
+        }
+    }
+}
+
+@media all and (max-width: 1450px) {
+    .info {    
+        &__title {
+            margin-left: 155px;
+            font-size: 56px;
+        }
+    
+        &__image {
+            width: 384px;
+            height: 488px;
+            margin-right: 160px;
+        }
+    
+        &__button {
+            @include textOrange();
+            font-size: 26px;
+        }
+    }
+}
+
+@media all and (max-width: 1310px) {
+    .info {    
+        &__title {
+            margin-left: 115px;
+            font-size: 48px;
+        }
+    
+        &__image {
+            width: 384px;
+            height: 488px;
+            margin-right: 135px;
+        }
+    
+        &__button {
+            @include textOrange();
+            font-size: 24px;
         }
     }
 }

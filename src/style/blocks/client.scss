@@ -2,6 +2,7 @@
     @include columnDirection();
     align-items: center;
     justify-content: center;
+    font-size: 48px;
 
     &__subtitle {
         @include aboutUsText();
@@ -32,5 +33,32 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media all and (max-width: 1720px) {
+    .client {
+        font-size: 42px;
+    }
+}
+
+@media all and (max-width: 1550px) {
+    .client {
+        font-size: 36px;
+        
+    &__subtitle {
+        max-width: 540px;
+        margin-bottom: 80px;
+    }
+    }
+}
+
+@media all and (max-width: 1450px) {
+    .client {
+        font-size: 32px;
+        
+    &__subtitle {
+        max-width: 480px;
+    }
     }
 }
