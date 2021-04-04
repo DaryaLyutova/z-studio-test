@@ -10,6 +10,7 @@
         width: 64px;
         height: 65px;
         background-image: url('../../images/tu\ 1.svg');
+        background-size: cover;
         margin-left: 175px;
     }
 
@@ -39,8 +40,9 @@
     }
 }
 
-    @media all and (max-width: 1450px) {
-        .header {        
+    @media screen and (max-width: 1450px) {
+        .header {
+            padding: 40px 0 35px 0;       
             &__logo {
                 margin-left: 155px;
             }
@@ -52,14 +54,51 @@
 }
 
 
-@media all and (max-width: 1310px) {
+@media screen and (max-width: 1310px) {
     .header {        
         &__logo {
-            margin-left: 115px;
-        }
+            margin-left: 95px;
+        }    
     
         &__navigation {
-            margin-right: 135px;
-        }        
+            margin-right: 105px;
+            max-width: 626px;
+        }
+        &__link {
+            font-size: 18px;
+        }    
+    }
 }
+
+@media all and (max-width: 950px) {
+    .header {        
+        &__logo {
+            width: 54px;
+            height: 55px;
+            margin-left: 85px;
+        }    
+    
+        &__navigation {
+            margin-right: 85px;
+            max-width: 426px;
+        }
+        &__link {
+            font-size: 12px;
+        }    
+    }
+}
+
+@media all and (max-width: 750px) {
+    .header { 
+        padding: 0;       
+        &__logo {
+            width: 32px;
+            height: 32.5px;
+            margin: 97px 0 0 48px;
+        }    
+    
+        &__navigation {
+            display: none;
+        }   
+    }
 }

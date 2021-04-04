@@ -17,7 +17,6 @@ $colorWigth: #ffffff;
 @mixin textOrange {
     font-style: normal;
     font-weight: 300;
-    font-size: 32px;
     line-height: 100%;
     text-align: center;
     color: #FF9B07;
@@ -26,8 +25,7 @@ $colorWigth: #ffffff;
 @mixin aboutUsText {
     font-style: normal;
     font-weight: normal;
-    line-height: 124%;
-    letter-spacing: -1.26px;
+    line-height: 100%;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #ffffff;
 }
