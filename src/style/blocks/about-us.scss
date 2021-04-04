@@ -2,7 +2,7 @@
     @include columnDirection();
     align-items: center;
     justify-content: center;
-    font-family: $fontFamily;
+    font-family: $fontFamilyBook;
     width: 100%;
     max-width: 1920px;
 
@@ -10,16 +10,20 @@
         @include columnDirection();
         align-items: flex-start;
         justify-content: flex-start;
+        
     }
 
     &__block {
         @include rowDirection();
-        justify-content: center;
+
+        &:last-of-type {
+        position: relative;
+        top: -83px
+        }
     }
 
     &__image-teachers {
         position: relative;
-        // left: -98px;
         top: -83px;
         display: flex;
         max-width: 1107px;
@@ -30,7 +34,7 @@
     &__subtitle-teachers {
         @include aboutUsText();
         max-width: 720px;
-        margin-right: 117px;
+        margin: 238px 117px 37px 0;
     }
 
     &__link {
@@ -50,8 +54,13 @@
     &__subtitle-guests {
         @include aboutUsText();
         max-width: 654px;
-        margin-left: 188px;
-        margin-right: 83px;
+        margin: 206px 83px 0 188px;
+        padding: 0;
+        
+        &:last-of-type {
+            margin-top: 0;
+            padding-top: 60px;
+        }
     }
 
 }

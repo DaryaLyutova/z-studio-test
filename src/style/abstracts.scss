@@ -1,28 +1,12 @@
-$fontFamily: 'ALS Hauss', Arial, Helvetica;
-// $font-family1: 'BonaNova-Italic';
+$fontFamilyReg: 'ALS Hauss', Arial, Helvetica;
+$fontFamilyMed: 'ALS Hauss', Arial, Helvetica;
+$fontFamilyBook: 'ALS Hauss Book', Arial, Helvetica;
+$fontFamilyIt: 'ALS Hauss';
 $colorWigth: #ffffff;
-// $colorGrey: #101010;
-// $moveWigth: 750px;
-// $moveHeigth: 422px;
-// $moveWigth910: 563px;
-// $moveHeigth910: 317px;
-// $moveWigth768: 522px;
-// $moveHeigth768: 293px;
-
-// @mixin headerTitle {
-//   font-family: 'Bebas Neue', 'AdobeInvisFont', 'Myriad Pro Regular';
-//   text-transform: uppercase;
-//   color: $colorWigth;
-//   text-align: left;
-//   font-style: normal;
-//   font-weight: normal;
-// }
 
 @mixin rowDirection {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 
 @mixin columnDirection {
@@ -31,12 +15,10 @@ $colorWigth: #ffffff;
 }
 
 @mixin textOrange {
-    font-family: ALS Hauss;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 32px;
     line-height: 100%;
-    align-items: center;
     text-align: center;
     color: #FF9B07;
 }
@@ -50,13 +32,3 @@ $colorWigth: #ffffff;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #ffffff;
 }
-
-// @mixin buttonDefaultStyle {
-//   border: none;
-//   outline: none;
-//   padding: 0;
-//   margin: 0;
-//   font: inherit;
-//   color: inherit;
-//   background-color: transparent;
-// }

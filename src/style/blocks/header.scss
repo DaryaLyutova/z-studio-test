@@ -1,31 +1,38 @@
 .header {
     @include rowDirection();
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 1571px;
+    padding: 59px 0 55px 0;
 
     &__logo {
         width: 64px;
         height: 65px;
         background-image: url('../../images/tu\ 1.svg');
-        margin-top: 59px;
     }
 
     &__navigation {
         @include rowDirection();
-        margin-top: 66px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 726px;
     }
 
     &__link {
         text-decoration: none;
         color: $colorWigth;
-        font-family: $fontFamily;
+        font-family: $fontFamilyReg;
         font-style: normal;
-        font-weight: 350;
+        font-weight: 300;
         font-size: 24px;
         line-height: 50px;
         text-align: right;
-        letter-spacing: -1.25573px;
         font-feature-settings: 'pnum' on, 'lnum' on;
-        padding-left: 50px;    
+        
+        &:first-of-type {
+            width: 134px;
+        }
     }
 }

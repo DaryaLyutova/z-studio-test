@@ -1,25 +1,27 @@
 .info {
     @include rowDirection();
-    font-family: $fontFamily;
+    font-weight: 400;
+    font-family: $fontFamilyBook;
     font-style: normal;
 
     &__title {
         display: block;
         justify-content: flex-start;
         align-items: center;
-        margin: 0 0 0 175px;
+        margin: 200px 0 0 175px;
+        width: 100%;
         max-width: 923px;
         font-weight: normal;
         font-size: 100px;
-        line-height: 100px;
-        letter-spacing: -1.25573px;
-        font-feature-settings: 'pnum' on, 'lnum' on;
+        line-height: 100%;
+
         color: $colorWigth;
     }
 
-    // &__title-italics {
-    //     font-family: $font-family1;
-    // }
+    &__title-italics {
+        font-family: $fontFamilyIt;
+        font-style: italic;
+    }
 
     &__wrapper {
         @include columnDirection();
@@ -27,18 +29,19 @@
 
     &__image {
         display: flex;
-        max-width: 835px;
-        max-height: 835px;
+        height: 603px;
+        margin: 116px 182px 42px 182px;
     }
 
     &__subtitle {
         @include textOrange();
-        position: relative;
-        top: -74px;
-        font-weight: 350;        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
+        font-weight: 350;      
+        margin: 0 0 42px 0; 
+
+        &_boild {
+            font-family: $fontFamilyMed;
+            font-weight: bold; 
+            margin: 0;
+        }
     }
 }
