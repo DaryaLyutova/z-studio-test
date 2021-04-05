@@ -1,57 +1,15 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(href="css/main.css" rel="stylesheet")
-    title z-studio-test
-    
-  body
+extends layout/main
+
+block content
     div.page
-        header.header 
-            a.header__logo(herf="#") 
-            nav.header__navigation 
-                a.header__link(href="#") Курсы
-                a.header__link(href="#") Наймите выпускника
-                a.header__link(href="#") Личный кабинет
+        include modules/header
         main.description 
-            section.info 
-                h1.info__title школа <br>диджитал навыков от <span class="info__title-italics">практикующих</span> профессионалов
-                div.info__wrapper
-                    img.info__image(src="../images/info.png", alt="О школе за 72 секунды")
-                    button.info__button О школе <span class="info__subtitle info__subtitle_boild">  за 72 секунды</span>
-            section.about-us 
-                div.about-us__block
-                    img.about-us__image-teachers(src="../images/image-1.svg", alt="прогулка")
-                    div.about-us__wrapper
-                        p.about-us__subtitle-teachers Каждый преподаватель это либо специалист нашей студии, либо владелец бизнеса
-                        a.about-us__link(href="#") портфолио студии
-                div.about-us__block 
-                    div.about-us__wrapper
-                        p.about-us__subtitle-guests Мы не приглашаем именитых гостей ради заголовков
-                        p.about-us__subtitle-guests У нас только практические знания для приобретения навыка
-                    img.about-us__image-guests(src="../images/image-2.svg", alt="ключ")
-            section.client    
-                p.client__subtitle За 3 года через нас прошло более 7 000 специалистов, среди которых сотрудники
-                ul.client__list 
-                    li.client__item
-                        img.client__item-image(src="../images/Логотип_телеканала_«ТНТ»_с_2020_года 1.svg", alt="ТНТ")
-                    li.client__item
-                        img.client__item-image(src="../images/Vector.svg", alt="Кока-кола")
-                    li.client__item
-                        img.client__item-image(src="../images/Splat.svg", alt="Сплат")
-                    li.client__item
-                        img.client__item-image(src="../images/BlackStar.svg", alt="Блэк Стар")
-                    li.client__item
-                        img.client__item-image(src="../images/Toyota.svg", alt="Тойота")
-                    li.client__item
-                        img.client__item-image(src="../images/Henkel.svg", alt="Хенкель")
-                    li.client__item
-                        img.client__item-image(src="../images/Baikal.svg", alt="Байкал")
-                    li.client__item
-                        img.client__item-image(src="../images/department.svg", alt="ДОиН г. Москвы")
-        div.popup
-            figure.popup__container
-                button.popup__close-button
-                iframe.popup__video(src="https://www.youtube.com/embed/XemDmsmnYII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            include modules/info
+            include modules/about-us            
+            include modules/client            
+                include modules/client-screen
+                include modules/client-mobile
+            script 
+                include ../js/client.js
+        include modules/popup
     script(src="./js/main.js")

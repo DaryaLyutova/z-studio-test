@@ -32,18 +32,40 @@
           </div>
         </section>
         <section class="client">   
-          <p class="client__subtitle">За 3 года через нас прошло более 7 000 специалистов, среди которых сотрудники</p>
-          <ul class="client__list"> 
-            <li class="client__item"><img class="client__item-image" src="../images/Логотип_телеканала_«ТНТ»_с_2020_года 1.svg" alt="ТНТ"></li>
-            <li class="client__item"><img class="client__item-image" src="../images/Vector.svg" alt="Кока-кола"></li>
-            <li class="client__item"><img class="client__item-image" src="../images/Splat.svg" alt="Сплат"></li>
-            <li class="client__item"><img class="client__item-image" src="../images/BlackStar.svg" alt="Блэк Стар"></li>
-            <li class="client__item"><img class="client__item-image" src="../images/Toyota.svg" alt="Тойота"></li>
-            <li class="client__item"><img class="client__item-image" src="../images/Henkel.svg" alt="Хенкель"></li>
-            <li class="client__item"><img class="client__item-image" src="../images/Baikal.svg" alt="Байкал"></li>
-            <li class="client__item"><img class="client__item-image" src="../images/department.svg" alt="ДОиН г. Москвы"></li>
-          </ul>
+          <p class="client__subtitle">За 3 года через нас прошло более 7 000 специалистов, среди которых сотрудники
+            <ul class="client__list"> 
+              <li class="client__item"><img class="client__item-image" src="../images/Логотип_телеканала_«ТНТ»_с_2020_года 1.svg" alt="ТНТ"></li>
+              <li class="client__item"><img class="client__item-image" src="../images/Vector.svg" alt="Кока-кола"></li>
+              <li class="client__item"><img class="client__item-image" src="../images/Splat.svg" alt="Сплат"></li>
+              <li class="client__item"><img class="client__item-image" src="../images/BlackStar.svg" alt="Блэк Стар"></li>
+              <li class="client__item"><img class="client__item-image" src="../images/Toyota.svg" alt="Тойота"></li>
+              <li class="client__item"><img class="client__item-image" src="../images/Henkel.svg" alt="Хенкель"></li>
+              <li class="client__item"><img class="client__item-image" src="../images/Baikal.svg" alt="Байкал"></li>
+              <li class="client__item"><img class="client__item-image" src="../images/department.svg" alt="ДОиН г. Москвы"></li>
+            </ul>
+            <ul class="client__list-mobile">
+              <li class="client__item-mobile"><img class="client__item-image-mobile" src="../images/Логотип_телеканала_«ТНТ»_с_2020_года 1.svg" alt="ТНТ"><img class="client__item-image-mobile" src="../images/Toyota.svg" alt="Тойота"></li>
+              <li class="client__item"><img class="client__item-image-mobile" src="../images/Vector.svg" alt="Кока-кола"><img class="client__item-image-mobile" src="../images/Baikal.svg" alt="Байкал"></li>
+              <li class="client__item"><img class="client__item-image-mobile" src="../images/department.svg" alt="ДОиН г. Москвы"><img class="client__item-image-mobile" src="../images/BlackStar.svg" alt="Блэк Стар"></li>
+              <li class="client__item"><img class="client__item-image-mobile" src="../images/Henkel.svg" alt="Хенкель"><img class="client__item-image-mobile" src="../images/Splat.svg" alt="Сплат"></li>
+            </ul>
+          </p>
         </section>
+        <script>
+           const client = document.querySelector('.client__list')
+const clientMobile = document.querySelector('.client__list-mobile')
+
+setTimeout(function random() {
+    if (window.screen.availWidth < 768) {
+        clientMobile.classList.add('client__list-mobile_visible');
+        client.classList.remove('client__list_visible');
+    } else {
+        client.classList.add('client__list_visible');
+        clientMobile.classList.remove('client__list-mobile_visible');
+    }
+    setTimeout(random, 1000);
+}, 1000);
+        </script>
       </main>
       <div class="popup">
         <figure class="popup__container">

@@ -49,7 +49,7 @@ var config = {
 		baseDir: "./build",
 		directory: true
 	},
-	//tunnel: true,
+	tunnel: true,
 	host: 'localhost',
 	port: 9000,
 	logPrefix: "PipZip"
@@ -100,7 +100,7 @@ gulp.task('images:build', function () {
 	return gulp.src(path.src.images)
 		.pipe(imagemin({
 			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
+			svgoPlugins: [{ removeViewBox: false }],
 			use: [pngquant()],
 			interlaced: true
 		}))
