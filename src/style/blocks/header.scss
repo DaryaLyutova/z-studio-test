@@ -88,13 +88,23 @@
     }
 }
 
+@media all and (max-width: 870px) {
+    .header {
+        max-width: 320px;
+
+        &__logo {
+            margin-left: 20px;
+        }
+    }
+}
+
 @media all and (max-width: 750px) {
     .header { 
-        padding: 0;       
+        // padding: 0;       
         &__logo {
             width: 32px;
             height: 32.5px;
-            margin: 97px 0 0 48px;
+            margin-top: 57px;
         }    
     
         &__navigation {
