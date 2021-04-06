@@ -84,7 +84,11 @@
         }
         &__link {
             font-size: 12px;
-        }    
+        }
+        
+        &__navigation {
+            display: none;
+        } 
     }
 }
 
@@ -99,16 +103,11 @@
 }
 
 @media all and (max-width: 750px) {
-    .header { 
-        // padding: 0;       
+    .header {      
         &__logo {
             width: 32px;
             height: 32.5px;
-            margin-top: 57px;
-        }    
-    
-        &__navigation {
-            display: none;
-        }   
+            margin-top: 62px;
+        }  
     }
 }

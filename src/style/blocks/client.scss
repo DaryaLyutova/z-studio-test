@@ -126,12 +126,13 @@
     
         &__subtitle {
             max-width: 280px;
-            margin: 127px 0 62px 0;
+            margin: 127px 0 65px 0;
             line-height: 100%;
             letter-spacing: 0;
         }
 
         &__list {
+            display: flex;
             max-width: 320px;
             padding: 0;
             margin: 0;
@@ -141,21 +142,68 @@
         }
 
         &__item {
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            
+            &_tnt {
+                order: 0;
+            }
+    
+            &_cocaCola {
+                order: 2;
+            }
+    
+            &_toyota {
+                order: 1;
+            }
+    
+            &_baikal {
+                order: 3;
+            }
+    
+            &_department {
+                order: 4;
+            }
+    
+            &_blackStar {
+                order: 5;
+            }
+    
+            &_henkel {
+                order: 6;
+            }
+    
+            &_splat {
+                order: 7;
+            }
+        }
+
+        &__item-block{
             display: flex;
-            margin: 20px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: inherit;
+            height: inherit;
+            margin: 0;
+        }
+
+        &__item {
+            display: flex;
+            margin: 20px 20px 16px 20px;
             align-items: center;
             justify-content: center;
         }
 
         &__item-image {
             &_tnt {
-                width: 99px;
-                height: 34px;
+                width: 106px;
+                height: 42px;
             }
     
             &_cocaCola {
-                width: 123px;
-                height: 40px;
+                width: 121px;
+                height: 42px;
             }
     
             &_toyota {
@@ -164,7 +212,7 @@
             }
     
             &_baikal {
-                width: 109px;
+                width: 118px;
                 height: 33px;
             }
     

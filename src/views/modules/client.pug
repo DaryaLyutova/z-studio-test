@@ -1,3 +1,9 @@
+- const icons = {tnt: 'images/ТНТ.svg', cocaCola: 'images/Coca-Cola.svg', splat: 'images/Splat.svg', blackStar: 'images/BlackStar.svg', toyota: 'images/Toyota.svg', henkel: 'images/Henkel.svg', baikal: 'images/Baikal.svg', department: 'images/department.svg'}
+
 section.client    
     p.client__subtitle За 3 года через нас прошло более 7 000 специалистов, среди которых сотрудники
-    
+    ul.client__list
+        each val, key in icons 
+            li(class="client__item client__item_" +key)
+                div.client__item-block
+                    img(class="client__item-image client__item-image_" +key src= val alt= key)
