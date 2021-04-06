@@ -12,12 +12,6 @@
         background-image: url('../images/tu\ 1.svg');
         background-size: contain;
         margin-left: 175px;
-
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            transition: transform 0.05s, linear;
-        }
     }
 
     &__navigation {
@@ -45,8 +39,7 @@
         }
 
         &:hover {
-            transform: scale(1.1);
-            transition: transform 0.05s, linear;
+            text-decoration: underline;
         }
     }
 }
