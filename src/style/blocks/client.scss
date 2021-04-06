@@ -147,6 +147,46 @@
             justify-content: center;
         }
 
-        
+        &__item-image {
+            &_tnt {
+                width: 99px;
+                height: 34px;
+            }
+    
+            &_cocaCola {
+                width: 123px;
+                height: 40px;
+            }
+    
+            &_toyota {
+                width: 56px;
+                height: 35px;
+            }
+    
+            &_baikal {
+                width: 109px;
+                height: 33px;
+            }
+    
+            &_department {
+                width: 113px;
+                height: 39px;
+            }
+    
+            &_blackStar {
+                width: 122px;
+                height: 41px;
+            }
+    
+            &_henkel {
+                width: 79px;
+                height: 42px;
+            }
+    
+            &_splat {
+                width: 103px;
+                height: 55px;
+            }
+        }
     }
 }

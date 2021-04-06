@@ -4,15 +4,21 @@
   "description": "test ",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"  ,
+    "predeploy": "gulp build",
+    "deploy": "gh-pages -d build"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaryaLyutova/z-studio-test"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://daryalyutova.github.io/z-studio-test/",
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.1",
@@ -21,6 +27,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
   },
+  "homepage": "https://github.com/DaryaLyutova/z-studio-test",
   "dependencies": {
     "gulp-clean-css": "^4.3.0",
     "gulp-pug": "^4.0.1",

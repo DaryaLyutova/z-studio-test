@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 	rimraf = require('rimraf'),
 	reload = browserSync.reload,
 	pug = require('gulp-pug');
+    ghPages = require('gulp-gh-pages');
 
 
 
@@ -125,8 +126,6 @@ gulp.task('fonts:build', function () {
 		.pipe(reload({ stream: true }));
 });
 
-
-
 gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts:build', 'images:build', 'img:build'));
 
 gulp.task('watch', function () {
@@ -147,5 +146,12 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('webwatch', gulp.parallel('watch', 'webserver'));
+
+gulp.task('deploy', function () {
+	return gulp.src("./build/*")
+		.pipe(ghPages());
+});
+
+// gulp.task('deploy', gulp.series('dep', 'clean'));
 
 gulp.task('default', gulp.series('build', 'webwatch'));
