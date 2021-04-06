@@ -10,8 +10,14 @@
         width: 64px;
         height: 65px;
         background-image: url('../images/tu\ 1.svg');
-        background-size: cover;
+        background-size: contain;
         margin-left: 175px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.05s, linear;
+        }
     }
 
     &__navigation {
@@ -36,6 +42,11 @@
         
         &:first-of-type {
             width: 134px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.05s, linear;
         }
     }
 }

@@ -52,7 +52,13 @@
         left: -98px;
         font-weight: 350;
         font-size: 32px;
-        margin-left: 74px;
+        // margin-left: 74px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.05s, linear;
+        }
     }
 
     &__image-guests {
@@ -191,10 +197,6 @@
         &__subtitle-teachers {
             max-width: 420px;
             margin: 78px 57px 20px 74px;
-        }
-
-        &__link {
-            margin-left: 74px;
         }
     
         &__image-guests {
