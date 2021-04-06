@@ -4,10 +4,11 @@
   "description": "test ",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "author": "",
   "license": "ISC",
+  "homepage": "https://daryalyutova.github.io/z-studio-test/",
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
