@@ -14,4 +14,4 @@ ul.client__list
         each val in iconsMobile
             each val1, key in val
                 li.client__item
-                    img.client__item-image(src= val1 alt= key)
+                    img(class="client__item-image client__item-image_"+key src= val1 alt= key)
